@@ -1,0 +1,25 @@
+{
+  "name": "school-public-space-finder-workshop-guide",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "학교 밖 공공시설·프로그램 찾기 만들기 — 단계별 연수 강의안 (정적 사이트)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "verify": "node scripts/verify-content.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "typescript": "~5.6.3",
+    "vite": "^5.4.10"
+  }
+}
