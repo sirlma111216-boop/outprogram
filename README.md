@@ -33,7 +33,17 @@ npm run preview    # dist 미리보기
 
 ## 배포 (Cloudflare Pages)
 
-1. 이 폴더를 GitHub 저장소 `school-public-space-finder-workshop-guide`에 올립니다.
+현재 배포: https://outprogram.pages.dev (Cloudflare Pages 프로젝트 `outprogram`, 원본 https://github.com/sirlma111216-boop/outprogram)
+
+이 프로젝트는 wrangler 직접 업로드 방식이라 GitHub에 푸시해도 자동으로 다시 배포되지 않습니다. 내용을 고친 뒤 다음 명령으로 다시 배포합니다.
+
+```bash
+npm run build && npm run verify && npx wrangler pages deploy dist --project-name outprogram --branch main
+```
+
+GitHub 푸시만으로 자동 배포되게 하려면 대시보드에서 Git 연결 프로젝트를 새로 만듭니다.
+
+1. 이 폴더를 GitHub 저장소에 올립니다.
 2. Cloudflare 대시보드 → Workers & Pages → Create application → Pages → Import an existing Git repository.
 3. Build command `npm run build`, Build output directory `dist`, 환경변수 없음.
 4. 발급된 `https://….pages.dev` 주소를 참가자에게 전달합니다.
