@@ -35,18 +35,14 @@ npm run preview    # dist 미리보기
 
 현재 배포: https://outprogram.pages.dev (Cloudflare Pages 프로젝트 `outprogram`, 원본 https://github.com/sirlma111216-boop/outprogram)
 
-이 프로젝트는 wrangler 직접 업로드 방식이라 GitHub에 푸시해도 자동으로 다시 배포되지 않습니다. 내용을 고친 뒤 다음 명령으로 다시 배포합니다.
+이 프로젝트는 GitHub 저장소와 연결되어 있습니다. main 브랜치에 푸시하면 Cloudflare가 자동으로 빌드해 같은 주소에 다시 배포합니다. 새 배포는 대시보드의 Deployments 목록에서 커밋 번호로 확인합니다.
 
-```bash
-npm run build && npm run verify && npx wrangler pages deploy dist --project-name outprogram --branch main
-```
+처음 연결할 때 쓴 설정은 다음과 같습니다.
 
-GitHub 푸시만으로 자동 배포되게 하려면 대시보드에서 Git 연결 프로젝트를 새로 만듭니다.
-
-1. 이 폴더를 GitHub 저장소에 올립니다.
-2. Cloudflare 대시보드 → Workers & Pages → Create application → Pages → Import an existing Git repository.
+1. Cloudflare 대시보드 → Workers & Pages → Create application → Pages → Import an existing Git repository.
+2. 저장소 `sirlma111216-boop/outprogram`, Production branch `main`.
 3. Build command `npm run build`, Build output directory `dist`, 환경변수 없음.
-4. 발급된 `https://….pages.dev` 주소를 참가자에게 전달합니다.
+4. 발급된 `https://outprogram.pages.dev` 주소를 참가자에게 전달합니다.
 
 ## 내용 고치기
 
